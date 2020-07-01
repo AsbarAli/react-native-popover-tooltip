@@ -288,6 +288,7 @@ class PopoverTooltip extends React.PureComponent<Props, State> {
 
     return (
       <TouchableOpacity
+        hitSlop={{left: 50, right: 50, top: 50, bottom: 50}}
         ref={this.wrapperRef}
         style={this.props.componentWrapperStyle}
         onPress={this.props.onPress}

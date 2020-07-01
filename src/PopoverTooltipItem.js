@@ -47,7 +47,9 @@ class PopoverTooltipItem extends React.PureComponent<Props> {
       : this.props.label();
     return (
       <View style={[styles.itemContainer, this.props.containerStyle]}>
-        <TouchableOpacity onPress={this.onPress}>
+        <TouchableOpacity 
+            hitSlop={{left: 50, right: 50, top: 5, bottom: 5}}
+            onPress={this.onPress}>
           {label}
         </TouchableOpacity>
       </View>
